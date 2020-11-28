@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 
 route::get('home', 'HomeController@show');
+route::get('/posts/{post}', 'PostsController@show');

@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 route::get('home', 'HomeController@show');
 route::get('/posts/{post}', 'PostsController@show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

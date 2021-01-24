@@ -7,25 +7,28 @@
             class="container"
             >
 
-            @foreach ($animes as $anime)
+            @foreach ($animesItems as $key => $data)
+                <tr>
+                    <th>{{$data->}}</th>
+                </tr>
                 <div class="content">
                     <div class="title">
                         <h2>
-                            <a href="/animes/{{ $anime->id }}">
-                                {{ $anime->title }}
+                            <a href="/animes/{{ $animesItem->id }}">
+                                {{ $animesItem->title }}
                             </a>
                         </h2>
                     </div>
 
                     <p>
                         <img
-                        src="{{ $anime->image }}"
+                        src="{{ $animesItem->image }}"
                         alt=""
                         class="image image-full"
                         />
                     </p>
 
-                    {!! $anime->excerpt !!}
+                    {!! $animesItem->excerpt !!}
                 </div>
                 @endforeach
         </div>

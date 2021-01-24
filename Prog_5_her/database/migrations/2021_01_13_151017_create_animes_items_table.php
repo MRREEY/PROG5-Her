@@ -21,6 +21,7 @@ class CreateAnimesItemsTable extends Migration
             $table->text('description');
             $table->timestamps();
             $table->foreignId('category_id')->constrained('categories');
+
         });
     }}
 

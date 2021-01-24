@@ -22,7 +22,7 @@
         </div>
 
         <div class="links">
-            <a href="https://laravel.com/docs">Animes</a>
+            <a href="{{ url('listAnime') }}">Animes</a>
             <a href="{{ url('animes/create') }}">Add Anime</a>
             <a href="https://laravel-news.com">test</a>
         </div>

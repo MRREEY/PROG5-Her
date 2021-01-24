@@ -30,8 +30,15 @@
 <h1>{{$animesItem->title}}</h1>
 <img src={{$animesItem->image}} width="500" height="600">
 <h1>{{$animesItem->description}}</h1>
-<h1>{{$animesItem->category->title}}</h1>
+<p><b>Category:</b></b> <br>{{$animesItem->category->title}}</p>
 <p><b>Gepost op:</b></b> <br>{{$animesItem->created_at}}</p>
 <p><b>Geüpdate op:</b></b> <br>{{$animesItem->updated_at}}</p>
+<form action="{{route('edit', $animesItem->id)}}">
+    <button
+    type="submit"
+    class="btn p-0 text-muted"
+    >Edit</button>
+</form>
+<a href="{{ url('listAnime') }}">Terug naar animes</a>
 </body>
 </html>

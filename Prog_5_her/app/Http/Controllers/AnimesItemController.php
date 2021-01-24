@@ -132,6 +132,8 @@ class AnimesItemController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $animesItems = AnimesItem::find($id);
+        $animesItems->destroy();
+        return redirect('animes')->with('succes', 'Anime is verwijderd');
     }
 }
